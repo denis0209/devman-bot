@@ -30,8 +30,6 @@ def Nissan(update, context):
 def KIA(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Kia Motors Corporation — южнокорейская автомобилестроительная компания, второй автопроизводитель в Республике Корея и седьмой в мире, основана в декабре 1944 года. Входит в группу компаний Hyundai Motor Group. В 2016 году в мире было продано 3 007 976 автомобилей. Официальный слоган компании — «The Power to Surprise».")
 
-
-
 from telegram.ext import CommandHandler
 start_handler = CommandHandler('Start', Start)
 dispatcher.add_handler(start_handler)
@@ -44,6 +42,8 @@ dispatcher.add_handler(start_handler)
 start_handler = CommandHandler('Ferrari', Ferrari)
 dispatcher.add_handler(start_handler)
 start_handler = CommandHandler('Toyota', Toyota)
+dispatcher.add_handler(start_handler)
+start_handler = CommandHandler('Renault', Renault)
 dispatcher.add_handler(start_handler)
 start_handler = CommandHandler('Nissan', Nissan)
 dispatcher.add_handler(start_handler)
