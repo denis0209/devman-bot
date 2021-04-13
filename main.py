@@ -34,7 +34,14 @@ updater.start_polling()
 
 import os 
 
+if __name__ == '__main__':
+  Start()
+  Mercedes()
+  
+
+
 password = os.getenv("PASSWORD")
 
 print("Тайный пароль:")
 print(password)
+
