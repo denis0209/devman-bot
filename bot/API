@@ -1,0 +1,8 @@
+import requests
+url = 'https://dvmn.org/api/user_reviews/'
+headers = {
+    "Authorization": "Token 8d9568ebf48777de0f146e2d401cd0a2413b0589"
+}
+
+response = requests.get(url, headers=headers)
+response.raise_for_status()

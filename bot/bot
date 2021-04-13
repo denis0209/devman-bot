@@ -1,0 +1,18 @@
+import telegram
+bot = telegram.Bot(token='1620299649:AAGWjR7VqGz4kDnldm8Vt65_BcQIKr6jCnQ')
+updates = bot.get_updates()
+print([u.message.text for u in updates])
+updates = bot.get_updates()
+print([u.message.photo for u in updates if u.message.photo])
+from telegram.ext import Updater
+updater = Updater(token='1620299649:AAGWjR7VqGz4kDnldm8Vt65_BcQIKr6jCnQ', use_context=True)
+import logging
+dispatcher = updater.dispatcher
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                     level=logging.INFO)
+def start(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Hello")
+from telegram.ext import CommandHandler
+start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+updater.start_polling()
