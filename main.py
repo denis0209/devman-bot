@@ -12,9 +12,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                      level=logging.INFO)
 
 def Start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Список команд: \n/First \n/Second \n/Third")
-def First(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Первый ответ")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Выберите автомобиль: \n/Mercedes \n/Audi \n/BMW \n/Ferrari \n/Toyota ")
+def Mercedes(update, photo):
+    bot.send_photo(chat_id=update, img = open('/images/mercedes.jpg', 'rb'))
 def Second(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Второй ответ")
 def Third(update, context):
