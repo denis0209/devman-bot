@@ -23,7 +23,7 @@ def Third(update, context):
 from telegram.ext import CommandHandler
 start_handler = CommandHandler('Start', Start)
 dispatcher.add_handler(start_handler)
-start_handler = CommandHandler('First', First)
+start_handler = CommandHandler('Mercedes', Mercedes)
 dispatcher.add_handler(start_handler)
 start_handler = CommandHandler('Second', Second)
 dispatcher.add_handler(start_handler)
