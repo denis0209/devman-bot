@@ -32,13 +32,14 @@ start_handler = CommandHandler('Third', Third)
 dispatcher.add_handler(start_handler)
 updater.start_polling()
 
+
+@bot.messge_heandler(content_types=['text'])
+def send_p(message):
+  if message.text == 'Merc':
+    img = open('./images/mercedes.jpg', 'rb')
+    bot.send_photo(message.chat.id, img)
+
 import os 
-
-if __name__ == '__main__':
-  Start()
-  Mercedes()
-
-
 
 password = os.getenv("PASSWORD")
 
