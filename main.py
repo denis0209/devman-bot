@@ -14,7 +14,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 def Start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Выберите автомобиль: \n/Mercedes \n/Audi \n/BMW \n/Ferrari \n/Toyota ")
 def Mercedes(message):
-    img = open('/images/mercedes.jpg', 'rb')
+    img = open('images/mercedes.jpg', 'rb')
     bot.send_photo(message.chat.id, img)
 def Second(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Второй ответ")
@@ -37,7 +37,7 @@ import os
 if __name__ == '__main__':
   Start()
   Mercedes()
-  
+
 
 
 password = os.getenv("PASSWORD")
