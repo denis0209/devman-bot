@@ -10,8 +10,6 @@ import logging
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
-                     
-bot.message_handler(comands=['start'])
 
 def Start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Выберите автомобиль: \n/Mercedes \n/Audi \n/BMW \n/Ferrari \n/Toyota \n/Renault \n/Nissan \n/KIA")
